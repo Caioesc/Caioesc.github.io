@@ -1,0 +1,279 @@
+/* Conteúdo geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+main {
+    margin-top: 70px; 
+    margin-bottom: 70px;
+}
+
+h2 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 28px;
+}
+/* Header e Footer */
+header, footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+header nav a, footer nav a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+}
+
+header button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+/* Botão do menu */
+.menu-button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+}
+
+/* Menu lateral */
+.slide-menu {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 250px;
+    height: 100%; 
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    flex-direction: column; 
+    padding: 20px;
+    gap: 20px;
+    transition: left 0.3s ease;
+}
+
+.slide-menu .link {
+    font-size: 23px;
+    color: white;
+    transition: transform 0.5s;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.slide-menu a:hover {
+    background-color: #333;
+}
+
+.slide-menu.open {
+    left: 0;
+}
+
+.botao-dark {
+    background-color: #333;
+}
+
+.slide-menu button:hover {
+    background-color: #333;
+}
+
+/*Início (Integrantes)*/
+.integrantes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.integrante {
+    max-width: 200px;
+    text-align: center;
+    margin: 15px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.integrante img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.integrante img:hover, .card:hover, .link:hover {
+    transform: scale(1.1);
+}
+
+/* Galeria */
+.integrante-galeria {
+    margin: 20px auto;
+    height: 300px;
+    padding: 20px;
+    max-width: 900px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.integrante-galeria h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.integrante-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; 
+}
+
+.integrante-foto {
+    width: 40px; 
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.card {
+    flex: 1;
+    max-width: calc(33.33% - 10px);
+    text-align: center;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    transition: transform 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.card img {
+    height: 200px;
+    width: 200px;
+    border-radius: 10px;
+}
+
+/* Contato (Formulário) */
+form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+form input, form textarea, form button {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+form button {
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+/* Data e hora */
+#date-time {
+    margin-top: 10px;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #222;
+    color: #ddd;
+}
+
+body.dark-mode header, body.dark-mode footer {
+    background-color: #444;
+    color: #fff;
+}
+
+body.dark-mode nav a {
+    color: #ddd;
+}
+
+body.dark-mode .integrante {
+    background-color: #333;
+    border-color: #555;
+    color: #ddd;
+}
+
+body.dark-mode .integrante-galeria {
+    background-color: #333;
+    border-color: #555;
+    color: #ddd;
+}
+
+body.dark-mode .card {
+    background-color: #444;
+    border-color: #666;
+    color: #ddd;
+}
+
+body.dark-mode .integrante-galeria h3 {
+    color: #ddd;
+}
+
+body.dark-mode form {
+    background-color: #333;
+    border-color: #555;
+    color: #ddd;
+}
+
+body.dark-mode form input, body.dark-mode form textarea {
+    background-color: #444;
+    border-color: #666;
+    color: #ddd;
+}
+
+body.dark-mode form button {
+    background-color: #555;
+    color: #ddd;
+}
+
+body.dark-mode form button:hover {
+    background-color: #666;
+}
+
+.integrante img:hover, .card:hover, .slide-menu .link:hover {
+    transform: scale(1.1);
+}
